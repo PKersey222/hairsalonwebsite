@@ -1,129 +1,88 @@
-.container { 
-    display: grid;
-    grid-template-areas:
-      "header"
-      "email" 
-      "comments"
-      "how-did-you-hear-about-me" 
-      "contact-you"
-      "submit";
-
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(68, 67, 67, 0.75),
+      rgba(58, 58, 58, 0.75)
+    ),
+    url("./backgroundphoto3.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
-.logo { grid-area: logo;}
-.navbar { grid-area: navbar}
-
-    
-
-
-.banner {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(68, 67, 67, 0.75),rgba(58, 58, 58, 0.75)),url(backgroundphoto3.jpg);
-    background-size: cover;
-    background-position: center;
+.container {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "navbar"
+    "contact-form";
 }
-.banner h1 {
-    font-size: 50px;
+
+.logo {
+  grid-area: logo;
 }
-.navbar{
-    width: 85%;
-    margin: auto;
-    padding: 35px 0;
+.navbar {
+  grid-area: navbar;
+}
+.contact-form {
+  grid-area: contact-form;
+  margin: auto;
+  /* width: max-content; */
+}
+.contact-form > div {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 2%;
+}
+.contact-form input {
+    margin-left: auto;
+    margin: 2%;
+}
+.contact-form label {
+    padding-right: 50px;
+}
+
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  /* width: 85%; */
+  margin: 0 auto;
+  /* padding: 35px 0; */
+  /* align-items: center; */
+  justify-content: space-around;
 }
 .logo {
-    width: 120px;
-    cursor: pointer;
-    text-decoration: none;
-    color: lightgray;
-    text-transform: uppercase;
-    border: solid 25px rgb(248, 195, 203);
+  margin: 0 auto;
+  max-width: 120px;
+  font-size: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  color: lightgray;
+  text-transform: uppercase;
+  border: solid 25px rgb(248, 195, 203);
 }
 
 .navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    
+  list-style: none;
+  display: inline;
+  /* margin: 0 20px; */
 }
 
-.navbar ul li a{
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    border: solid 3px rgb(252, 195, 203);
-    
-
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  border: solid 3px rgb(252, 195, 203);
 }
 
+@media (min-width: 992px) {
 
 
-#submit {
-    grid-area: submit;
-}
-
-#header {
-    grid-area: header;
-    text-align: center;
-    
-}
-
-#email {
-    grid-area: email;
-    text-align: center;
-}
-#comments {
-    grid-area: comments;
-    text-align: center;
-    
-}
-#how-did-you-hear-about-me {
-    grid-area: how-did-you-hear-about-me;
-    text-align: center;
-    
-}
-#contact-you {
-    grid-area: contact-you;
-    text-align: center;
-}
-
-
-@media (min-width: 576px) {
-    .container {
-       display: grid;
-       grid-template-columns: 1fr 1fr;
-       grid-template-rows: repeat(6, 1fr);
-       grid-template-areas:
-           "header header"
-           "email email"
-           "comments comments" 
-           "how-did-you-hear-about-me how-did-you-hear-about-me"
-           "contact-you contact-you"
-           "submit submit";
-    }
-
- 
-
-   } 
-
-   @media (min-width: 992px) {
-
-     /* body {
-        background-color: black; 
-      }  */
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(6, 1fr);
         grid-template-areas:
-        "header header"
-        "email email"
-        "comments comments" 
-        "how-did-you-hear-about-me how-did-you-hear-about-me"
-        "contact-you contact-you"
-        "submit submit";
+        "logo navbar"
+        "contact-form"
+
+        
      }
     }
