@@ -27,27 +27,23 @@ body {
 .contact-form {
   grid-area: contact-form;
   margin: auto;
-  /* width: max-content; */
 }
 .contact-form > div {
-    display: flex;
-    padding: 2%;
+  display: flex;
+  padding: 2%;
 }
 .contact-form input {
-    margin-left: auto;
-    margin: 2%;
+  margin-left: auto;
+  margin: 2%;
 }
 .contact-form label {
-    padding-right: 50px;
+  padding-right: 50px;
 }
 
 .navbar {
   grid-area: navbar;
   display: flex;
-  /* width: 85%; */
   margin: 0 auto;
-  /* padding: 35px 0; */
-  /* align-items: center; */
   justify-content: space-around;
 }
 .logo {
@@ -64,7 +60,6 @@ body {
 .navbar ul li {
   list-style: none;
   display: inline;
-  /* margin: 0 20px; */
 }
 
 .navbar ul li a {
@@ -73,16 +68,11 @@ body {
   text-transform: uppercase;
   border: solid 3px rgb(252, 195, 203);
 }
-
 @media (min-width: 992px) {
-
-
-    .container {
-        display: grid;
-        grid-template-areas:
-        "logo navbar"
-        "contact-form"
-
-        
-     }
-    }
+  .container {
+    display: grid;
+    grid-template-areas:
+      "logo navbar"
+      "contact-form";
+  }
+}
